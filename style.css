@@ -13,6 +13,7 @@ font-family: 'Rajdhani', sans-serif;
 *{
     padding: 0px;
     margin: 0px;
+    font-family: 'Rajdhani', sans-serif;
 }
 body{
     display: flex;
@@ -25,6 +26,7 @@ body{
 /*      HEADER          */
 .snoetje{
     color: #3F8ADD;
+    text-shadow: white 1px 1px;
     font-family: 'Moon Dance', cursive;
     padding: 10px  0 0 20px;
     letter-spacing: 2px;
@@ -68,14 +70,45 @@ header > .grote-nav > ul, .kleine-nav > ul{
     /* grote nav */
 .grote-nav{
     display: none;
+    height: 60px;
+}
+.grote-nav > ul{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.grote-nav > ul > li{
+    width: 20%;
+}
+.grote-nav > ul > li > a{
+    text-decoration: none;
+    color:#3F8ADD;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+/*      MAIN CONTENT    */
+.btn-style{
+    border: white;
+    background: #3F8ADD;
+    width: 100px;
+    height: 40px;
+    border-radius: 0 10px 0 10px;
+    color: white;
+    font-weight:900;
+    letter-spacing: 1px;
+    cursor: pointer
+}
+.link{
+    color:#3F8ADD;
 }
 main{
     padding: 150px 0px;
     min-height: 55vh;
-}
-/*      MAIN CONTENT    */
-main{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .white-box{
     background: rgb(255,255,255,0.8);
@@ -86,19 +119,96 @@ main{
     align-items: center;
     min-height: 400px;
     padding: 30px;
+    font-family: 'Rajdhani', sans-serif;
+    color:#3F8ADD;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 80%;
+}
+.text-box >  h1{
+    border-top: 2px solid #3F8ADD;
+    border-bottom: 2px solid #3F8ADD;
+    margin-bottom: 20px;
 }
 .foto-box{
     min-height: 200px;
 }
 .foto-in-fotobox{
     width: 200px;
+    border-radius: 5px;
 }
 .text-box{
     min-height: 200px;
+    padding: 30px 0;
+}
+/*      menukaart       */
+.menukaart > div > .text-box{
+    width: 100%;
+    justify-content: flex-start;
+}
+.menukaart> div:nth-child(even){
+    flex-direction: column-reverse;
+}
+.menukaart > div > .text-box > ul{
+    list-style: none;
+}
+.menukaart > div > .text-box > ul > li{
+    padding: 10px 0px;
+}
+.menukaart > div > .text-box > ul > li > span{
+    border-right: 1px solid #3F8ADD;
+    padding: 0 3px;
+}
+/*      vacatures       */
+.vacatures > div > section > h3, h4{
+    padding: 4px 0px;
+    font-weight: 900;
+    font-size: 24px;
+}
+/*      contactformulier    */
+.contact-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact-formulier{
+    background: rgb(255,255,255,0.8);
+    height: 600px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-formulier > input{
+    height: 50px;
+    width: 80%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 2px solid #3F8ADD;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.contact-formulier > input:nth-child(1){
+    margin-top: 50px;
+}
+.contact-formulier > textarea{
+    height: 140px;
+    width: 80%;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 2px solid #3F8ADD;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 /*      FOOTER          */
+.icon{
+    width: 24px;
+}
 footer{
-    background: rgb(255,255,255,0.7);
+    background: white;
     height: 100px;
     width: 100%;
     display: flex;
@@ -109,27 +219,27 @@ footer{
 }
 .footer1 > a{
     text-decoration: none;
-    color: red;
     cursor: pointer;
 }
 .footer2{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .footer2 > p > a{
     text-decoration: none;
-    color: red;
 }
 .footer2 > p{
     color: #3F8ADD;
 }
 
 
+@media only screen and (max-width: 767px){
+    /*  mobiel  */
 
-
-
+}
 @media only screen and (min-width: 768px){
     /*  TABLET  */
+    /*              HEADER              */
     body{
         background-image: url(img/snoetje-buiten.jpg);
     }
@@ -139,6 +249,21 @@ footer{
     .grote-nav{
         display: block;
     }
+    /*              MAIN                */
+
+    /*              MENUKAART           */
+    /*              CONTACTFORMULIER    */
+    .contact-formulier{
+        width: 50%;
+    }
+    .menukaart> div:nth-child(even){
+        flex-direction: column;
+    }
+    /*              Footer      */
+    footer{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
 
 }@media only screen and (min-width: 1200px){
     /*  LAPTOP  */
@@ -146,3 +271,14 @@ footer{
 @media only screen and (min-width: 1920px){
     /*  DESKTOP */
 }
+
+/*              TODO:   
+    -contact formulier maken
+    -reserveer formulier maken     
+
+    -tablet versie
+    -laptop versie
+    -desktop versie
+
+    -js kleine nav maken met nav die op knop verschijnt
+*/
