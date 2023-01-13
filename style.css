@@ -75,10 +75,13 @@ header > .grote-nav > ul, .kleine-nav > ul{
 .grote-nav > ul{
     width: 100%;
     display:flex;
-    justify-content: space-between;
 }
 .grote-nav > ul > li{
-    width: 20%;
+    width: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
 }
 .grote-nav > ul > li > a{
     text-decoration: none;
@@ -146,9 +149,6 @@ main{
     width: 100%;
     justify-content: flex-start;
 }
-.menukaart> div:nth-child(even){
-    flex-direction: column-reverse;
-}
 .menukaart > div > .text-box > ul{
     list-style: none;
 }
@@ -158,6 +158,11 @@ main{
 .menukaart > div > .text-box > ul > li > span{
     border-right: 1px solid #3F8ADD;
     padding: 0 3px;
+}
+.menukaart > div > .text-box > ul > li > h3{
+    border-top: 2px solid #3F8ADD;
+    border-bottom: 2px solid #3F8ADD;
+    text-align: center;
 }
 /*      vacatures       */
 .vacatures > div > section > h3, h4{
@@ -203,6 +208,40 @@ main{
     letter-spacing: 1px;
     font-size: 16px;
 }
+/*                  RESERVEER FORMULIER     */
+.reserveer-box{
+    width: 80%;
+}
+.reserveer-formulier{
+    background: rgb(255,255,255,0.8);
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reserveer-formulier > input{
+    height: 50px;
+    width: 80%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 2px solid #3F8ADD;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.reserveer-formulier > textarea{
+    height: 140px;
+    width: 80%;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 2px solid #3F8ADD;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.reserveer-formulier > input:nth-child(1){
+    margin-top: 50px;
+}
 /*      FOOTER          */
 .icon{
     width: 24px;
@@ -235,7 +274,9 @@ footer{
 
 @media only screen and (max-width: 767px){
     /*  mobiel  */
-
+    .menukaart> div:nth-child(even){
+        flex-direction: column-reverse;
+    }
 }
 @media only screen and (min-width: 768px){
     /*  TABLET  */
@@ -252,33 +293,56 @@ footer{
     /*              MAIN                */
 
     /*              MENUKAART           */
+    .menukaart> div{
+        flex-direction: row;
+    }
+    .menukaart > div > .text-box{
+        width: 50%;
+    }
+    .menukaart > div > .foto-box{
+        width: 50%;
+    }
     /*              CONTACTFORMULIER    */
+    
     .contact-formulier{
         width: 50%;
     }
-    .menukaart> div:nth-child(even){
-        flex-direction: column;
+    /*              CONTACTFORMULIER    */
+    .reserveer-box{
+        width: 50%;
     }
     /*              Footer      */
     footer{
         flex-direction: row-reverse;
         justify-content: space-evenly;
     }
-
+    /*              whitebox                */
+    .white-box{
+        flex-direction: row;
+    }
+    .white-box > .text-box{
+        width:50%;
+    }
+    .white-box > .foto-box{
+        width:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .foto-in-fotobox{
+        width: 300px;
+    }
 }@media only screen and (min-width: 1200px){
     /*  LAPTOP  */
+    .foto-in-fotobox{
+        width: 400px;
+    }
 }
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1918px){
     /*  DESKTOP */
+    
 }
 
-/*              TODO:   
-    -contact formulier maken
-    -reserveer formulier maken     
-
-    -tablet versie
-    -laptop versie
-    -desktop versie
-
+/*              TODO:    
     -js kleine nav maken met nav die op knop verschijnt
 */
