@@ -101,7 +101,6 @@ header > .grote-nav > ul, .kleine-nav > ul{
     position: relative;
 }
 .nav-item{
-    border: 2px solid #3F8ADD;
     padding: 20px 0px;
 }
 .off-canvas-nav > ul{
@@ -375,4 +374,6 @@ footer{
 
 /*              TODO:    
     -off canvas nav fixen dan voila finito
+
+    overlay navigaties oefenen!!!!
 */
